@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .cities {
+            background-color: black;
+            color: white;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .cities2 {
+            background-color: brown;
+            color: chartreuse;
+            margin: 10px;
+            padding: 50px;
+        }
+
+        .main {
+            text-align: center
+        }
+
+        span.note {
+            font-size: 120%;
+            color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <p>In CSS, to select elements with a specific class, write a period (.) character, followed by the name of the
+        class:</p>
+    <p>it's possible to reference 2 classes</p>
+    <h2>Classes on Block elements</h2>
+    <div class="cities">
+        <h2>London</h2>
+        <p>London is the capital of England.</p>
+    </div>
+
+    <div class="cities2 main">
+        <h2>Paris</h2>
+        <p>Paris is the capital of France.</p>
+    </div>
+
+    <div class="cities main">
+        <h2>Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <h2>Classes on inline elements</h2>
+    <h1>My <span class="note">Important</span> Heading</h1>
+    <p>This is some <span class="note">important</span> text.</p>
+
+
+    <h2>Using JavaScript</h2>
+    <p>Click the button</p>
+
+
+    <button onclick="myFunction()">Hide some elements</button>
+
+    <h2 class="city">London</h2>
+    <p>London is the capital of England.</p>
+
+    <h2 class="city">Paris</h2>
+    <p>Paris is the capital of France.</p>
+
+    <h2 class="city">Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementsByClassName("city");
+            for (var i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
